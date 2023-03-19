@@ -1,0 +1,58 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+}
+body{
+    background-color: #060d17;
+    height: 100vh;
+}
+.MyCardContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem;
+    gap: 1.5rem;
+}
+.MyCard:hover{
+    background-color: rgba(27, 3, 58, 0.979);
+}
+.MyCard img:hover{
+    transform: scale(1.2);
+    transition: transform 1s ease-in-out;
+}
+.MyCard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    border: .1rem solid grey;
+}
+.MyCard img{
+    width: 90%;
+}
+@media (max-width:1000px)
+{
+.MyCardContainer{
+    grid-template-columns: repeat(3,1fr);
+}
+}
+@media (max-width:700px)
+{
+    .MyCardContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:400px)
+{
+    .MyCardContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
